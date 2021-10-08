@@ -7,3 +7,5 @@ pypyr
 python-dotenv
 tensorflow
 uvicorn
+scikit-learn
+boto3
