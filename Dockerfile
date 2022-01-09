@@ -25,10 +25,10 @@ COPY ./pipelines /app/pipelines
 
 WORKDIR /app
 
+RUN chmod +x entrypoint.sh
+
 RUN python3 -m venv /opt/venv && /opt/venv/bin/python -m pip install -r requirements.txt
 
 RUN /opt/venv/bin/python -m pypyr /app/pipelines/spam-ml-model
-
-RUN chmod +x entrypoint.sh
 
 CMD  ["entrypoint.sh"]
