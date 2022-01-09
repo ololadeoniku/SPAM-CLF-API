@@ -1,4 +1,4 @@
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 import json
 import numpy as np
@@ -12,11 +12,12 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 class NotImplemented(Exception):
     pass
 
-@dataclass
+@dataclass #(order=True, frozen=True)
 class MLModel:
     model_path: Path
     tokenizer_path: Optional[Path] = None
     metadata_path: Optional[Path] = None
+    sort_index:int = field(init=False, repr=False)
 
     model = None
     tokenizer = None
