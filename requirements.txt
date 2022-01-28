@@ -9,3 +9,4 @@ tensorflow
 uvicorn
 scikit-learn
 boto3
+cryptography

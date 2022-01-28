@@ -31,4 +31,6 @@ RUN python3 -m venv /opt/venv && /opt/venv/bin/python -m pip install -r requirem
 
 RUN /opt/venv/bin/python -m pypyr /app/pipelines/spam-ml-model
 
+RUN /opt/venv/bin/python -m pypyr /app/pipelines/decrypt
+
 CMD  ["entrypoint.sh"]
