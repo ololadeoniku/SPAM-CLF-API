@@ -33,4 +33,4 @@ RUN /opt/venv/bin/python -m pypyr /app/pipelines/spam-ml-model
 
 RUN /opt/venv/bin/python -m pypyr /app/pipelines/decrypt
 
-CMD  ["entrypoint.sh"]
+CMD  ["./entrypoint.sh"]
